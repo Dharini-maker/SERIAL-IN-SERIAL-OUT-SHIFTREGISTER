@@ -48,31 +48,31 @@ RegisterNumber:24002206
 
 SERIAL IN SERIAL OUT SHIFT REGISTER
 
-module EXP10(clk, sin, q);
+   module EXP10(clk, sin, q);
 
-input clk;
+  input clk;
 
-input sin;
+  input sin;
 
-output [3:0] q;
+  output [3:0] q;
 
-reg [3:0] q;
+  reg [3:0] q;
 
-always @(posedge clk)
+  always @(posedge clk)
 
-begin
+  begin
 
-q[0] <= sin;
+  q[0] <= sin;
 
-q[1] <= q[0];
+  q[1] <= q[0];
 
-q[2] <= q[1];
+  q[2] <= q[1];
 
-q[3] <= q[2];
+  q[3] <= q[2];
 
-end
+  end
 
-endmodule
+  endmodule
 
 
 
